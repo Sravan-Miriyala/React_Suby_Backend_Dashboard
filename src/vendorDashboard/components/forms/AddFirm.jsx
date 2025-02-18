@@ -1,7 +1,6 @@
 
 import React, {useState} from 'react'
 import { API_URL } from '../../data/apiPath';
-import { ThreeCircles } from 'react-loader-spinner';
 
 
 const AddFirm = () => {
@@ -101,15 +100,7 @@ const AddFirm = () => {
   return (
         <div className="firmSection">
    {loading &&        <div className="loaderSection">
-        <ThreeCircles
-          visible={loading}
-          height={100}
-          width={100}
-          color="#4fa94d"
-          ariaLabel="three-circles-loading"
-          wrapperStyle={{}}
-          wrapperClass=""
-        />
+        
       </div>}
          {!loading &&   <form className="tableForm" onSubmit={handleFirmSubmit}>
             <h3>Add Firm</h3>

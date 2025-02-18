@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { API_URL } from '../../data/apiPath';
-import { ThreeCircles } from 'react-loader-spinner';
+
 
 
 const Login = ({showWelcomeHandler}) => {
@@ -55,15 +55,7 @@ const Login = ({showWelcomeHandler}) => {
   return (
     <div className="loginSection">
 {loading &&        <div className="loaderSection">
-        <ThreeCircles
-          visible={loading}
-          height={100}
-          width={100}
-          color="#4fa94d"
-          ariaLabel="three-circles-loading"
-          wrapperStyle={{}}
-          wrapperClass=""
-        />
+        
         <p>Login in process... Please wait</p>
       </div>}
      {!loading &&    <form  className='authForm' onSubmit={loginHandler} autoComplete='off'>
